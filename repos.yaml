@@ -1,11 +1,14 @@
 ./odoo:
     defaults:
-        depth: 1
+        depth: 1000
     remotes:
         odoo: https://github.com/odoo/odoo.git
+        ByteMeAsap: https://github.com/ByteMeAsap/odoo.git
     merges:
         - remote: odoo
           ref: 1ef366f104705838888cd929e68763cf7c5befba
+        - ByteMeAsap 16.0-fix-website_event
+
 
 # onestein
 ./addons-generic:
@@ -15,7 +18,7 @@
         onestein: https://github.com/onesteinbv/addons-generic.git
     merges:
         - remote: onestein
-          ref: dea9fa9af975133ced6be51c9e577a766fcd5d66
+          ref: 072d2a5789731d3422a75023a298976ecdfc35fc
 
 # oca
 ./oca:
@@ -25,7 +28,7 @@
         onestein: https://github.com/onesteinbv/addons-oca.git
     merges:
         - remote: onestein
-          ref: 407a4ffd81167732e41a9db99378fb7f34928f2c
+          ref: 76cde15648084a84b60871a5d2c558ce4a35be78
 
 # third-party
 ./addons-third-party:
@@ -62,4 +65,4 @@
     remotes:
         onestein: https://github.com/onesteinbv/addons-sendcloud.git
     merges:
-        - onestein 368cf1a86669fabb33108ce71f91c813014b776b
+        - onestein 5449f9af1d1c265f8d212b3b914f8d538be7072b
